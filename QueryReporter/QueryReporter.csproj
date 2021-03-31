@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C30AA58A-4EF7-4D5B-AE63-95FF3545C019}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TAIQueryReporter</RootNamespace>
+    <AssemblyName>TAIQueryReporter</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TAIGridControl2, Version=1.0.0.14, Culture=neutral, processorArchitecture=x86" />
+    <Reference Include="TAIObjectCanvas2, Version=1.0.0.15, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="TAISyntaxColorizer, Version=1.0.0.4, Culture=neutral" />
+    <Reference Include="Telerik.WinControls.RadChart, Version=2010.2.10.914, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddConstraint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddConstraint.Designer.cs">
+      <DependentUpon>frmAddConstraint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditCalculation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddEditCalculation.Designer.cs">
+      <DependentUpon>frmAddEditCalculation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditLookup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddEditLookup.Designer.cs">
+      <DependentUpon>frmAddEditLookup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddFilter.Designer.cs">
+      <DependentUpon>frmAddFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddLimiter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddLimiter.Designer.cs">
+      <DependentUpon>frmAddLimiter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddSortOps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddSortOps.Designer.cs">
+      <DependentUpon>frmAddSortOps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddSyntheticFields.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddSyntheticFields.Designer.cs">
+      <DependentUpon>frmAddSyntheticFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCurrentQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCurrentQuery.Designer.cs">
+      <DependentUpon>frmCurrentQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFieldBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFieldBrowser.Designer.cs">
+      <DependentUpon>frmFieldBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFilterJoiner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFilterJoiner.Designer.cs">
+      <DependentUpon>frmFilterJoiner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGraphing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGraphing.Designer.cs">
+      <DependentUpon>frmGraphing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectDataSource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetBuilder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetBuilder.Designer.cs">
+      <DependentUpon>frmSetBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStartup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStartup.Designer.cs">
+      <DependentUpon>frmStartup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUnderCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUnderCon.Designer.cs">
+      <DependentUpon>frmUnderCon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmSelectTableSource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectTableSource.Designer.cs">
+      <DependentUpon>frmSelectTableSource.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddConstraint.resx">
+      <DependentUpon>frmAddConstraint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddEditCalculation.resx">
+      <DependentUpon>frmAddEditCalculation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddEditLookup.resx">
+      <DependentUpon>frmAddEditLookup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddFilter.resx">
+      <DependentUpon>frmAddFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddLimiter.resx">
+      <DependentUpon>frmAddLimiter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddSortOps.resx">
+      <DependentUpon>frmAddSortOps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddSyntheticFields.resx">
+      <DependentUpon>frmAddSyntheticFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCurrentQuery.resx">
+      <DependentUpon>frmCurrentQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFieldBrowser.resx">
+      <DependentUpon>frmFieldBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFilterJoiner.resx">
+      <DependentUpon>frmFilterJoiner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGraphing.resx">
+      <DependentUpon>frmGraphing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectDataSource.resx">
+      <DependentUpon>frmSelectDataSource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectTableSource.resx">
+      <DependentUpon>frmSelectTableSource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetBuilder.resx">
+      <DependentUpon>frmSetBuilder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStartup.resx">
+      <DependentUpon>frmStartup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUnderCon.resx">
+      <DependentUpon>frmUnderCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="bin\Debug\QueryReporter.INI" />
+    <None Include="Docs\TAI Query Reporter Users Guide.pdf" />
+    <None Include="Docs\TAI Query Reporter Users Guide.pptx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\WaitOneMoment.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\under_construction2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Images\Question.JPG" />
+    <Content Include="Resources\Images\SpellCheck.jpg" />
+    <Content Include="Resources\logo.jpg" />
+    <None Include="SupportDLLS\TAIGridControl2.dll" />
+    <None Include="SupportDLLS\TAIObjectCanvas2.dll" />
+    <None Include="SupportDLLS\TAISyntaxColorizer.dll" />
+    <None Include="SupportDLLS\Telerik.WinControls.RadChart.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

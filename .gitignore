@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/TAIQueryReporter/obj/x86/Debug
+/TAIQueryReporter/bin/Debug/TAIGridControl2.dll
+/TAIQueryReporter/bin/Debug/TAIObjectCanvas2.dll
+/TAIQueryReporter/bin/Debug/TAIQueryReporter.exe
+/TAIQueryReporter/bin/Debug/TAIQueryReporter.exe.config
+/TAIQueryReporter/bin/Debug/TAIQueryReporter.pdb
+/TAIQueryReporter/bin/Debug/TAISyntaxColorizer.dll
+/TAIQueryReporter/bin/Debug/Telerik.WinControls.RadChart.dll
+/.vs/TAIQueryReporter/v16/.suo
