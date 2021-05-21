@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using TAIObjectCanvas2;
 using System.IO;
+using System.Security.Cryptography;
 
 
 namespace TAIQueryReporter
@@ -22,6 +23,7 @@ namespace TAIQueryReporter
 
         List<string> ServerInstances = new List<string>();
         List<string> PreSetServerInstances = new List<string>();
+        List<string> EncryptedServers = new List<string>();
 
         public bool Enumerate = false;
 
@@ -2298,6 +2300,17 @@ namespace TAIQueryReporter
                     {
                         PreSetServerInstances.Add(ln.Substring(7));
                     }
+
+                    if (ln.ToUpper().StartsWith("ENCRYPTEDSERVER="))
+                    {
+                        // We have an encrypted server entry lets defauklt to that one
+
+                        var TheEString = ln.Substring(23);
+
+                        EncryptedServers.Add(Decrypt(TheEString));
+                        txtConnectionString.Text = Decrypt(TheEString);
+
+                    }
                 }
             }
 
@@ -2322,5 +2335,55 @@ namespace TAIQueryReporter
 
             tais.CodeFont = f;
         }
+
+        public static string encrypt(string encryptString)
+        {
+            string EncryptionKey = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            byte[] clearBytes = Encoding.Unicode.GetBytes(encryptString);
+            using (Aes encryptor = Aes.Create())
+            {
+                Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(EncryptionKey, new byte[] {
+            0x49, 0x76, 0x61, 0x6e, 0x20, 0x4d, 0x65, 0x64, 0x76, 0x65, 0x64, 0x65, 0x76
+        });
+                encryptor.Key = pdb.GetBytes(32);
+                encryptor.IV = pdb.GetBytes(16);
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    using (CryptoStream cs = new CryptoStream(ms, encryptor.CreateEncryptor(), CryptoStreamMode.Write))
+                    {
+                        cs.Write(clearBytes, 0, clearBytes.Length);
+                        cs.Close();
+                    }
+                    encryptString = Convert.ToBase64String(ms.ToArray());
+                }
+            }
+            return encryptString;
+        }
+
+        public static string Decrypt(string cipherText)
+        {
+            string EncryptionKey = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            cipherText = cipherText.Replace(" ", "+");
+            byte[] cipherBytes = Convert.FromBase64String(cipherText);
+            using (Aes encryptor = Aes.Create())
+            {
+                Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(EncryptionKey, new byte[] {
+            0x49, 0x76, 0x61, 0x6e, 0x20, 0x4d, 0x65, 0x64, 0x76, 0x65, 0x64, 0x65, 0x76
+        });
+                encryptor.Key = pdb.GetBytes(32);
+                encryptor.IV = pdb.GetBytes(16);
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    using (CryptoStream cs = new CryptoStream(ms, encryptor.CreateDecryptor(), CryptoStreamMode.Write))
+                    {
+                        cs.Write(cipherBytes, 0, cipherBytes.Length);
+                        cs.Close();
+                    }
+                    cipherText = Encoding.Unicode.GetString(ms.ToArray());
+                }
+            }
+            return cipherText;
+        }
+
     }
 }
