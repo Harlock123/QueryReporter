@@ -120,7 +120,7 @@ namespace TAIQueryReporter
 
                 if (flds.Count != 0)
                 {
-                    frmAddEditLookup frm = new frmAddEditLookup(txtConnectionString.Text, flds);
+                    frmAddEditLookup frm = new frmAddEditLookup(decodeConnection(), flds);
                     frm.ShowDialog();
 
                     if (frm.Fields.Count != 0 && frm.FieldName != "" && frm.TableName != "" && frm.JoinField != "")
@@ -170,7 +170,7 @@ namespace TAIQueryReporter
 
                 AppendLookupFields(flds);
 
-                frmAddEditCalculation frm = new frmAddEditCalculation(txtConnectionString.Text, flds);
+                frmAddEditCalculation frm = new frmAddEditCalculation(decodeConnection(), flds);
                 frm.ShowDialog();
 
                 if (frm.CalcClause != "")
@@ -293,7 +293,7 @@ namespace TAIQueryReporter
         {
             if (txtConnectionString.Text != String.Empty)
             {
-                frmAddFilter frm = new frmAddFilter(txtConnectionString.Text, GetListOfTableNames());
+                frmAddFilter frm = new frmAddFilter(decodeConnection(), GetListOfTableNames());
                 frm.ShowDialog();
 
                 if (frm.Clause != "")
@@ -496,7 +496,7 @@ namespace TAIQueryReporter
 
         private void btnAddSyntheticField_Click(object sender, EventArgs e)
         {
-            frmAddSyntheticFields frm = new frmAddSyntheticFields(txtConnectionString.Text, GetListOfTableNames());
+            frmAddSyntheticFields frm = new frmAddSyntheticFields(decodeConnection(), GetListOfTableNames());
             frm.ShowDialog();
 
             frmAddSyntheticFields.SyntheticItem si = frm.SelectedSynthItem;
@@ -575,7 +575,7 @@ namespace TAIQueryReporter
                 theTabs.SelectedTab = tbResult;
 
                 taigResults.ShowProgressBar = true;
-                taigResults.PopulateGridWithData(txtConnectionString.Text, tais.Text);
+                taigResults.PopulateGridWithData(decodeConnection(), tais.Text);
             }
             else
             {
@@ -644,13 +644,25 @@ namespace TAIQueryReporter
             }
         }
 
+        private string decodeConnection()
+        {
+            if (Program.TheEncryptedConnectionString != "")
+            {
+                return Decrypt(txtConnectionString.Text);
+            }
+            else
+            {
+                return txtConnectionString.Text;
+            }
+        }
+
         private void btnSelectTableSource_Click(object sender, EventArgs e)
         {
             //Check if the connection string is empty
             if (txtConnectionString.Text != String.Empty)
             {
-
-                frmSelectTableSource frm = new frmSelectTableSource(txtConnectionString.Text);
+                
+                frmSelectTableSource frm = new frmSelectTableSource(decodeConnection());
                 string fields = "";
 
                 frm.ShowDialog();
@@ -1053,7 +1065,7 @@ namespace TAIQueryReporter
                     lflds.Add(s);
                 }
 
-                frmSelectTableSource frm = new frmSelectTableSource(txtConnectionString.Text, tname, lflds);
+                frmSelectTableSource frm = new frmSelectTableSource(decodeConnection(), tname, lflds);
                 frm.ShowDialog();
 
                 if (frm.SelectedTableName != "")
@@ -1093,7 +1105,7 @@ namespace TAIQueryReporter
 
                 AppendLookupFields(flds);
 
-                frmAddEditLookup frm = new frmAddEditLookup(txtConnectionString.Text, flds, DoubleClickedObject);
+                frmAddEditLookup frm = new frmAddEditLookup(decodeConnection(), flds, DoubleClickedObject);
                 frm.ShowDialog();
 
                 if (frm.Fields.Count != 0 && frm.FieldName != "" && frm.TableName != "" && frm.JoinField != "")
@@ -1131,7 +1143,7 @@ namespace TAIQueryReporter
 
                 AppendLookupFields(flds);
 
-                frmAddEditCalculation frm = new frmAddEditCalculation(txtConnectionString.Text, flds, DoubleClickedObject);
+                frmAddEditCalculation frm = new frmAddEditCalculation(decodeConnection(), flds, DoubleClickedObject);
                 frm.ShowDialog();
 
                 if (frm.CalcClause != "" && frm.Dbase != "" && frm.SelectedFields.Count != 0)
@@ -1170,7 +1182,7 @@ namespace TAIQueryReporter
 
             if (DoubleClickedObject.Name.StartsWith("SYNTH"))
             {
-                frmAddSyntheticFields frm = new frmAddSyntheticFields(txtConnectionString.Text, GetListOfTableNames(), DoubleClickedObject);
+                frmAddSyntheticFields frm = new frmAddSyntheticFields(decodeConnection(), GetListOfTableNames(), DoubleClickedObject);
                 frm.ShowDialog();
                 frmAddSyntheticFields.SyntheticItem si = frm.SelectedSynthItem;
 
@@ -1214,7 +1226,7 @@ namespace TAIQueryReporter
 
             if (DoubleClickedObject.Name.StartsWith("FILTER"))
             {
-                frmAddFilter frm = new frmAddFilter(txtConnectionString.Text, GetListOfTableNames(), DoubleClickedObject);
+                frmAddFilter frm = new frmAddFilter(decodeConnection(), GetListOfTableNames(), DoubleClickedObject);
                 frm.ShowDialog();
 
                 if (frm.Clause != "")
@@ -1401,7 +1413,7 @@ namespace TAIQueryReporter
 
                 AppendLookupFields(flds);
 
-                frmAddEditLookup frm = new frmAddEditLookup(txtConnectionString.Text, flds, true, DoubleClickedObject);
+                frmAddEditLookup frm = new frmAddEditLookup(decodeConnection(), flds, true, DoubleClickedObject);
                 frm.ShowDialog();
 
                 if (frm.Fields.Count != 0 && frm.FieldName != "" && frm.TableName != "" && frm.JoinField != "")
@@ -2110,7 +2122,7 @@ namespace TAIQueryReporter
             string sql = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '"
                         + GetBaseQueryTableName() + "' ORDER BY ORDINAL_POSITION";
 
-            SqlConnection cn = new SqlConnection(txtConnectionString.Text);
+            SqlConnection cn = new SqlConnection(decodeConnection());
             cn.Open();
 
             SqlCommand cmd = new SqlCommand(sql, cn);
@@ -2137,7 +2149,7 @@ namespace TAIQueryReporter
             string sql = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '"
                 + tname + "' ORDER BY ORDINAL_POSITION";
 
-            SqlConnection cn = new SqlConnection(txtConnectionString.Text);
+            SqlConnection cn = new SqlConnection(decodeConnection());
             cn.Open();
 
             SqlCommand cmd = new SqlCommand(sql, cn);
@@ -2307,8 +2319,10 @@ namespace TAIQueryReporter
 
                         var TheEString = ln.Substring(23);
 
+                        Program.TheEncryptedConnectionString = TheEString;
+
                         EncryptedServers.Add(Decrypt(TheEString));
-                        txtConnectionString.Text = Decrypt(TheEString);
+                        txtConnectionString.Text = TheEString;
 
                     }
                 }

@@ -7,6 +7,9 @@ namespace TAIQueryReporter
 {
     static class Program
     {
+        public static string TheEncryptedConnectionString = "";
+        public static string TheConnectionStringDecrypted = "";
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

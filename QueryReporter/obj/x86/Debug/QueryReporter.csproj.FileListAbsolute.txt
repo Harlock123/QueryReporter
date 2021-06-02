@@ -5,7 +5,6 @@ C:\Source\QueryReporter\QueryReporter\bin\Debug\TAIGridControl2.dll
 C:\Source\QueryReporter\QueryReporter\bin\Debug\TAIObjectCanvas2.dll
 C:\Source\QueryReporter\QueryReporter\bin\Debug\TAISyntaxColorizer.dll
 C:\Source\QueryReporter\QueryReporter\bin\Debug\Telerik.WinControls.RadChart.dll
-C:\Source\QueryReporter\QueryReporter\obj\x86\Debug\QueryReporter.csprojAssemblyReference.cache
 C:\Source\QueryReporter\QueryReporter\obj\x86\Debug\TAIQueryReporter.frmAbout.resources
 C:\Source\QueryReporter\QueryReporter\obj\x86\Debug\TAIQueryReporter.frmAddConstraint.resources
 C:\Source\QueryReporter\QueryReporter\obj\x86\Debug\TAIQueryReporter.frmAddEditCalculation.resources
@@ -30,3 +29,4 @@ C:\Source\QueryReporter\QueryReporter\obj\x86\Debug\QueryReporter.csproj.CoreCom
 C:\Source\QueryReporter\QueryReporter\obj\x86\Debug\QueryReporter.csproj.CopyComplete
 C:\Source\QueryReporter\QueryReporter\obj\x86\Debug\TAIQueryReporter.exe
 C:\Source\QueryReporter\QueryReporter\obj\x86\Debug\TAIQueryReporter.pdb
+C:\Source\QueryReporter\QueryReporter\obj\x86\Debug\QueryReporter.csproj.AssemblyReference.cache
