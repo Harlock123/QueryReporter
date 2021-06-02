@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TAIQueryReporter")]
+[assembly: AssemblyTitle("QueryReporter")]
 [assembly: AssemblyDescription("The Awesome query builder from TAI")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Tidgewell Associates, Inc.")]
-[assembly: AssemblyProduct("TAIQueryReporter")]
+[assembly: AssemblyProduct("QueryReporter")]
 [assembly: AssemblyCopyright("Copyright © Tidgewell Associates, Inc. 2010")]
 [assembly: AssemblyTrademark("Tidgewell Associates, Inc.")]
 [assembly: AssemblyCulture("")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.5")]
-[assembly: AssemblyFileVersion("1.0.0.5")]
+[assembly: AssemblyVersion("1.0.0.6")]
+[assembly: AssemblyFileVersion("1.0.0.6")]

@@ -2324,6 +2324,11 @@ namespace TAIQueryReporter
                         EncryptedServers.Add(Decrypt(TheEString));
                         txtConnectionString.Text = TheEString;
 
+                        // we have an encrypted SERVER connection setting
+                        // Deactivate the selection of a server
+
+                        BtnConnect2AServer.Enabled = false;
+
                     }
                 }
             }

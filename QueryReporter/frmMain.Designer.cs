@@ -89,11 +89,11 @@
             // 
             this.tais.BackColor = System.Drawing.SystemColors.HighlightText;
             this.tais.ConstantKeyWords = "MONEY,BIGINT,DATETIME,VARCHAR,YEAR,QUARTER,MONTH,DAYOFYEAR,DAY,WEEK,WEEKDAY,HOUR," +
-                "MINUTE,SECOND,MILLISECOND,YY,QQ,MM,DY,DD,WK,DW,HH,MI,SS,MS";
+    "MINUTE,SECOND,MILLISECOND,YY,QQ,MM,DY,DD,WK,DW,HH,MI,SS,MS";
             this.tais.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tais.FunctionKeyWords = resources.GetString("tais.FunctionKeyWords");
             this.tais.KeyWords = "SELECT,FROM,WHERE,ORDER,GROUP,BY,TOP,LIMIT,AS,ASC,DESC,AND,OR,NOT,NULL,IS,IN,LIKE" +
-                ",LEFT,RIGHT,FULL,INNER,OUTER,JOIN,ON,CASE,WHEN,THEN,ELSE,END,HAVING";
+    ",LEFT,RIGHT,FULL,INNER,OUTER,JOIN,ON,CASE,WHEN,THEN,ELSE,END,HAVING";
             this.tais.Location = new System.Drawing.Point(0, 0);
             this.tais.MatchCase = false;
             this.tais.Name = "tais";
@@ -148,9 +148,9 @@
             // 
             // theTabs
             // 
-            this.theTabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.theTabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.theTabs.Controls.Add(this.tbInterface);
             this.theTabs.Controls.Add(this.tbResult);
             this.theTabs.Location = new System.Drawing.Point(148, 56);
@@ -198,9 +198,9 @@
             this.taigResults.AlternateColoration = false;
             this.taigResults.AlternateColorationAltColor = System.Drawing.Color.MediumSpringGreen;
             this.taigResults.AlternateColorationBaseColor = System.Drawing.Color.AntiqueWhite;
-            this.taigResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.taigResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.taigResults.BorderColor = System.Drawing.Color.Black;
             this.taigResults.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.taigResults.CellOutlines = true;
@@ -572,7 +572,7 @@
             this.Controls.Add(this.theTabs);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
-            this.Text = "TAI Query Reporter ";
+            this.Text = "Query Reporter ";
             this.panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
