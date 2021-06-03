@@ -2326,8 +2326,19 @@ namespace TAIQueryReporter
 
                         // we have an encrypted SERVER connection setting
                         // Deactivate the selection of a server
+                        // rejigger some of the UI elements to hide ConnectionString and
+                        // readjust other onsreen elements to take up the available space
 
                         BtnConnect2AServer.Enabled = false;
+                        txtConnectionString.Visible = false;
+                        label3.Visible = false;
+
+                        int newy = 26;
+                        int oldy = theTabs.Location.Y;
+
+                        theTabs.Location = new Point(theTabs.Location.X, 26);
+
+                        theTabs.Size = new Size(theTabs.Size.Width, theTabs.Size.Height + (oldy - newy - 2));
 
                     }
                 }
