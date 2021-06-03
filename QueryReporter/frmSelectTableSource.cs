@@ -145,7 +145,31 @@ namespace TAIQueryReporter
                 cmd.Dispose();
                 cn.Close();
                 cn.Dispose();
+
+                UpdateNumberOfRecords();
+
             }
+        }
+
+        private void UpdateNumberOfRecords()
+        {
+            string sql = "SELECT COUNT(*) FROM [" + SelectedTableName + "]";
+            
+            SqlConnection cn = new SqlConnection(_dbase);
+            cn.Open();
+
+            SqlCommand cmd = new SqlCommand(sql, cn);
+
+            SqlDataReader r = cmd.ExecuteReader();
+
+            while(r.Read())
+            {
+                lblnumrecs.Text = r.GetInt32(0).ToString();
+            }
+            r.Close();
+            cmd.Dispose();
+            cn.Close();
+            cn.Dispose();
         }
 
         private void btnAccept_Click(object sender, EventArgs e)

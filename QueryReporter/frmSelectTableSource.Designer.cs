@@ -38,6 +38,8 @@
             this.btnNone = new System.Windows.Forms.Button();
             this.btnShowFieldBrowser = new System.Windows.Forms.Button();
             this.txtSearchTree = new System.Windows.Forms.TextBox();
+            this.lblnumrecs = new System.Windows.Forms.Label();
+            this.lblnumrecsdesc = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // clbFields
@@ -135,6 +137,25 @@
             this.txtSearchTree.TabIndex = 10;
             this.txtSearchTree.TextChanged += new System.EventHandler(this.HandleSearchTreeChanges);
             // 
+            // lblnumrecs
+            // 
+            this.lblnumrecs.AutoSize = true;
+            this.lblnumrecs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnumrecs.Location = new System.Drawing.Point(606, 107);
+            this.lblnumrecs.Name = "lblnumrecs";
+            this.lblnumrecs.Size = new System.Drawing.Size(16, 16);
+            this.lblnumrecs.TabIndex = 11;
+            this.lblnumrecs.Text = "0";
+            // 
+            // lblnumrecsdesc
+            // 
+            this.lblnumrecsdesc.AutoSize = true;
+            this.lblnumrecsdesc.Location = new System.Drawing.Point(605, 123);
+            this.lblnumrecsdesc.Name = "lblnumrecsdesc";
+            this.lblnumrecsdesc.Size = new System.Drawing.Size(88, 13);
+            this.lblnumrecsdesc.TabIndex = 12;
+            this.lblnumrecsdesc.Text = "Records in Table";
+            // 
             // frmSelectTableSource
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -142,6 +163,8 @@
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(702, 555);
             this.ControlBox = false;
+            this.Controls.Add(this.lblnumrecsdesc);
+            this.Controls.Add(this.lblnumrecs);
             this.Controls.Add(this.txtSearchTree);
             this.Controls.Add(this.btnShowFieldBrowser);
             this.Controls.Add(this.btnNone);
@@ -172,5 +195,7 @@
         private System.Windows.Forms.Button btnNone;
         private System.Windows.Forms.Button btnShowFieldBrowser;
         private System.Windows.Forms.TextBox txtSearchTree;
+        private System.Windows.Forms.Label lblnumrecs;
+        private System.Windows.Forms.Label lblnumrecsdesc;
     }
 }

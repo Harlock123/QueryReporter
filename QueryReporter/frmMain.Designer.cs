@@ -290,9 +290,9 @@
             // btnSelectTableSource
             // 
             this.btnSelectTableSource.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnSelectTableSource.Location = new System.Drawing.Point(8, 92);
+            this.btnSelectTableSource.Location = new System.Drawing.Point(8, 104);
             this.btnSelectTableSource.Name = "btnSelectTableSource";
-            this.btnSelectTableSource.Size = new System.Drawing.Size(132, 24);
+            this.btnSelectTableSource.Size = new System.Drawing.Size(132, 30);
             this.btnSelectTableSource.TabIndex = 14;
             this.btnSelectTableSource.Text = "Select Table Source";
             this.btnSelectTableSource.UseVisualStyleBackColor = false;
@@ -301,9 +301,9 @@
             // btnExecute
             // 
             this.btnExecute.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnExecute.Location = new System.Drawing.Point(8, 440);
+            this.btnExecute.Location = new System.Drawing.Point(8, 542);
             this.btnExecute.Name = "btnExecute";
-            this.btnExecute.Size = new System.Drawing.Size(132, 24);
+            this.btnExecute.Size = new System.Drawing.Size(132, 30);
             this.btnExecute.TabIndex = 15;
             this.btnExecute.Text = "Execute Query";
             this.btnExecute.UseVisualStyleBackColor = false;
@@ -312,9 +312,9 @@
             // btlAddLookup
             // 
             this.btlAddLookup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btlAddLookup.Location = new System.Drawing.Point(8, 120);
+            this.btlAddLookup.Location = new System.Drawing.Point(8, 140);
             this.btlAddLookup.Name = "btlAddLookup";
-            this.btlAddLookup.Size = new System.Drawing.Size(132, 24);
+            this.btlAddLookup.Size = new System.Drawing.Size(132, 30);
             this.btlAddLookup.TabIndex = 16;
             this.btlAddLookup.Text = "Add Lookup (Join)";
             this.btlAddLookup.UseVisualStyleBackColor = false;
@@ -345,9 +345,9 @@
             // btnAddCalculation
             // 
             this.btnAddCalculation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnAddCalculation.Location = new System.Drawing.Point(8, 176);
+            this.btnAddCalculation.Location = new System.Drawing.Point(8, 212);
             this.btnAddCalculation.Name = "btnAddCalculation";
-            this.btnAddCalculation.Size = new System.Drawing.Size(132, 24);
+            this.btnAddCalculation.Size = new System.Drawing.Size(132, 30);
             this.btnAddCalculation.TabIndex = 17;
             this.btnAddCalculation.Text = "Add Calculation";
             this.btnAddCalculation.UseVisualStyleBackColor = false;
@@ -355,10 +355,10 @@
             // 
             // btnAddRollup
             // 
-            this.btnAddRollup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnAddRollup.Location = new System.Drawing.Point(7, 269);
+            this.btnAddRollup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(225)))));
+            this.btnAddRollup.Location = new System.Drawing.Point(8, 351);
             this.btnAddRollup.Name = "btnAddRollup";
-            this.btnAddRollup.Size = new System.Drawing.Size(133, 24);
+            this.btnAddRollup.Size = new System.Drawing.Size(132, 30);
             this.btnAddRollup.TabIndex = 18;
             this.btnAddRollup.Text = "Add Rollup";
             this.btnAddRollup.UseVisualStyleBackColor = false;
@@ -367,9 +367,9 @@
             // btnAddSyntheticField
             // 
             this.btnAddSyntheticField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnAddSyntheticField.Location = new System.Drawing.Point(8, 204);
+            this.btnAddSyntheticField.Location = new System.Drawing.Point(8, 248);
             this.btnAddSyntheticField.Name = "btnAddSyntheticField";
-            this.btnAddSyntheticField.Size = new System.Drawing.Size(132, 24);
+            this.btnAddSyntheticField.Size = new System.Drawing.Size(132, 30);
             this.btnAddSyntheticField.TabIndex = 19;
             this.btnAddSyntheticField.Text = "Add Synthetic Field";
             this.btnAddSyntheticField.UseVisualStyleBackColor = false;
@@ -400,21 +400,21 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -430,14 +430,14 @@
             // versionToolStripMenuItem
             // 
             this.versionToolStripMenuItem.Name = "versionToolStripMenuItem";
-            this.versionToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.versionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.versionToolStripMenuItem.Text = "Version";
             this.versionToolStripMenuItem.Click += new System.EventHandler(this.versionToolStripMenuItem_Click);
             // 
             // currentQueryToolStripMenuItem
             // 
             this.currentQueryToolStripMenuItem.Name = "currentQueryToolStripMenuItem";
-            this.currentQueryToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.currentQueryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.currentQueryToolStripMenuItem.Text = "Current Query";
             this.currentQueryToolStripMenuItem.Click += new System.EventHandler(this.currentQueryToolStripMenuItem_Click);
             // 
@@ -447,20 +447,21 @@
             // 
             // btnClearCurrentQuery
             // 
-            this.btnClearCurrentQuery.Location = new System.Drawing.Point(7, 57);
+            this.btnClearCurrentQuery.BackColor = System.Drawing.Color.PapayaWhip;
+            this.btnClearCurrentQuery.Location = new System.Drawing.Point(8, 68);
             this.btnClearCurrentQuery.Name = "btnClearCurrentQuery";
-            this.btnClearCurrentQuery.Size = new System.Drawing.Size(133, 24);
+            this.btnClearCurrentQuery.Size = new System.Drawing.Size(132, 30);
             this.btnClearCurrentQuery.TabIndex = 21;
             this.btnClearCurrentQuery.Text = "Clear Current Query";
-            this.btnClearCurrentQuery.UseVisualStyleBackColor = true;
+            this.btnClearCurrentQuery.UseVisualStyleBackColor = false;
             this.btnClearCurrentQuery.Click += new System.EventHandler(this.btnClearCurrentQuery_Click);
             // 
             // btnAddFilter
             // 
             this.btnAddFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnAddFilter.Location = new System.Drawing.Point(8, 296);
+            this.btnAddFilter.Location = new System.Drawing.Point(9, 387);
             this.btnAddFilter.Name = "btnAddFilter";
-            this.btnAddFilter.Size = new System.Drawing.Size(132, 24);
+            this.btnAddFilter.Size = new System.Drawing.Size(132, 30);
             this.btnAddFilter.TabIndex = 22;
             this.btnAddFilter.Text = "Add Filter";
             this.btnAddFilter.UseVisualStyleBackColor = false;
@@ -469,9 +470,9 @@
             // btnAddConstraint
             // 
             this.btnAddConstraint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnAddConstraint.Location = new System.Drawing.Point(7, 324);
+            this.btnAddConstraint.Location = new System.Drawing.Point(8, 423);
             this.btnAddConstraint.Name = "btnAddConstraint";
-            this.btnAddConstraint.Size = new System.Drawing.Size(133, 24);
+            this.btnAddConstraint.Size = new System.Drawing.Size(132, 30);
             this.btnAddConstraint.TabIndex = 23;
             this.btnAddConstraint.Text = "Add Constraint";
             this.btnAddConstraint.UseVisualStyleBackColor = false;
@@ -480,9 +481,9 @@
             // btnAddLimiter
             // 
             this.btnAddLimiter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnAddLimiter.Location = new System.Drawing.Point(7, 232);
+            this.btnAddLimiter.Location = new System.Drawing.Point(8, 284);
             this.btnAddLimiter.Name = "btnAddLimiter";
-            this.btnAddLimiter.Size = new System.Drawing.Size(133, 24);
+            this.btnAddLimiter.Size = new System.Drawing.Size(132, 30);
             this.btnAddLimiter.TabIndex = 24;
             this.btnAddLimiter.Text = "Add Limiter Field";
             this.btnAddLimiter.UseVisualStyleBackColor = false;
@@ -491,9 +492,9 @@
             // btnAddSortOperation
             // 
             this.btnAddSortOperation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnAddSortOperation.Location = new System.Drawing.Point(7, 352);
+            this.btnAddSortOperation.Location = new System.Drawing.Point(8, 459);
             this.btnAddSortOperation.Name = "btnAddSortOperation";
-            this.btnAddSortOperation.Size = new System.Drawing.Size(133, 24);
+            this.btnAddSortOperation.Size = new System.Drawing.Size(132, 30);
             this.btnAddSortOperation.TabIndex = 25;
             this.btnAddSortOperation.Text = "Add Sorting Ops";
             this.btnAddSortOperation.UseVisualStyleBackColor = false;
@@ -502,9 +503,9 @@
             // btnHCLookup
             // 
             this.btnHCLookup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnHCLookup.Location = new System.Drawing.Point(8, 148);
+            this.btnHCLookup.Location = new System.Drawing.Point(9, 176);
             this.btnHCLookup.Name = "btnHCLookup";
-            this.btnHCLookup.Size = new System.Drawing.Size(132, 24);
+            this.btnHCLookup.Size = new System.Drawing.Size(132, 30);
             this.btnHCLookup.TabIndex = 26;
             this.btnHCLookup.Text = "Add HCLookup (select)";
             this.btnHCLookup.UseVisualStyleBackColor = false;
@@ -513,12 +514,11 @@
             // tbarFontSize
             // 
             this.tbarFontSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.tbarFontSize.Location = new System.Drawing.Point(101, 621);
+            this.tbarFontSize.Location = new System.Drawing.Point(42, 683);
             this.tbarFontSize.Maximum = 16;
             this.tbarFontSize.Minimum = 6;
             this.tbarFontSize.Name = "tbarFontSize";
-            this.tbarFontSize.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.tbarFontSize.Size = new System.Drawing.Size(45, 104);
+            this.tbarFontSize.Size = new System.Drawing.Size(104, 45);
             this.tbarFontSize.TabIndex = 27;
             this.tbarFontSize.Value = 12;
             this.tbarFontSize.Scroll += new System.EventHandler(this.HandletBarScroll);
@@ -527,18 +527,18 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(85, 614);
+            this.label1.Location = new System.Drawing.Point(58, 667);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 28;
-            this.label1.Text = "Font Size";
+            this.label1.Text = "Query Font Size";
             // 
             // btnAdd_Distinct
             // 
             this.btnAdd_Distinct.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnAdd_Distinct.Location = new System.Drawing.Point(7, 382);
+            this.btnAdd_Distinct.Location = new System.Drawing.Point(8, 495);
             this.btnAdd_Distinct.Name = "btnAdd_Distinct";
-            this.btnAdd_Distinct.Size = new System.Drawing.Size(133, 24);
+            this.btnAdd_Distinct.Size = new System.Drawing.Size(132, 30);
             this.btnAdd_Distinct.TabIndex = 29;
             this.btnAdd_Distinct.Text = "Add Distinct";
             this.btnAdd_Distinct.UseVisualStyleBackColor = false;
