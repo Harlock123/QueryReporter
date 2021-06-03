@@ -194,5 +194,34 @@ namespace TAIQueryReporter
                 frm.ShowDialog();
             }
         }
+
+        private void HandleSearchTreeChanges(object sender, EventArgs e)
+        {
+            TreeNode thenode = null;
+
+
+            foreach (TreeNode t in tvTables.Nodes)
+            {
+                if (t.Nodes.Count != 0)
+                {
+                    foreach(TreeNode tt in t.Nodes)
+                    {
+                        if (tt.Text.ToUpper().Contains(txtSearchTree.Text.ToUpper()))
+                        {
+                            thenode = tt;
+                            break;
+                        }
+                    }
+
+                    if (thenode!=null)
+                    {
+                        tvTables.SelectedNode = thenode;
+                        tvTables.TabIndex = 0;
+                        
+                        break;
+                    }
+                }
+            }
+        }
     }
 }

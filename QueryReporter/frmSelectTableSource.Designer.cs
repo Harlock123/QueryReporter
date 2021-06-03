@@ -37,6 +37,7 @@
             this.btnAll = new System.Windows.Forms.Button();
             this.btnNone = new System.Windows.Forms.Button();
             this.btnShowFieldBrowser = new System.Windows.Forms.Button();
+            this.txtSearchTree = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // clbFields
@@ -81,7 +82,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 20);
+            this.label1.Location = new System.Drawing.Point(1, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 13);
             this.label1.TabIndex = 5;
@@ -126,6 +127,14 @@
             this.btnShowFieldBrowser.UseVisualStyleBackColor = true;
             this.btnShowFieldBrowser.Click += new System.EventHandler(this.btnShowFieldBrowser_Click);
             // 
+            // txtSearchTree
+            // 
+            this.txtSearchTree.Location = new System.Drawing.Point(144, 12);
+            this.txtSearchTree.Name = "txtSearchTree";
+            this.txtSearchTree.Size = new System.Drawing.Size(95, 20);
+            this.txtSearchTree.TabIndex = 10;
+            this.txtSearchTree.TextChanged += new System.EventHandler(this.HandleSearchTreeChanges);
+            // 
             // frmSelectTableSource
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -133,6 +142,7 @@
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(702, 555);
             this.ControlBox = false;
+            this.Controls.Add(this.txtSearchTree);
             this.Controls.Add(this.btnShowFieldBrowser);
             this.Controls.Add(this.btnNone);
             this.Controls.Add(this.btnAll);
@@ -161,5 +171,6 @@
         private System.Windows.Forms.Button btnAll;
         private System.Windows.Forms.Button btnNone;
         private System.Windows.Forms.Button btnShowFieldBrowser;
+        private System.Windows.Forms.TextBox txtSearchTree;
     }
 }
